@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Untuk Sayang ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="hearts">
+        <span>❤️</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>💖</span>
+        <span>💓</span>
+        <span>❤️</span>
+        <span>💕</span>
+        <span>💗</span>
+    </div>
+
+    <main class="container">
+
+        <!-- PEMBUKA -->
+        <section class="hero">
+
+            <p class="label">
+                💌 PESAN KHUSUS UNTUK
+            </p>
+
+            <h1>
+                Sayang ❤️
+            </h1>
+
+            <p class="opening">
+                Aku tahu mungkin sekarang kamu lagi marah
+                sama aku...
+            </p>
+
+            <div class="couple-image">
+                <img
+                    src="boneka-sayang.png"
+                    alt="Boneka kembar untuk Sayang">
+            </div>
+
+            <p class="small-text">
+                Dari aku yang masih sayang sama kamu 🥺
+            </p>
+
+            <button
+                class="main-button"
+                onclick="bukaPesan()">
+                💗 Buka Pesanku
+            </button>
+
+        </section>
+
+
+        <!-- PESAN MAAF -->
+        <section
+            id="pesan"
+            class="section hidden">
+
+            <div class="card">
+
+                <div class="icon">
+                    💌
+                </div>
+
+                <h2>
+                    Hai Sayang ❤️
+                </h2>
+
+                <p>
+                    Aku tahu mungkin sekarang kamu lagi
+                    kecewa, kesel, atau masih marah sama aku.
+                </p>
+
+                <p>
+                    Tapi aku cuma mau minta sedikit waktu
+                    untuk ngomong dari hati.
+                </p>
+
+                <div class="quote">
+                    “Maafin aku ya, Sayang...
+                    Aku sadar aku nggak selalu sempurna,
+                    tapi aku selalu ingin belajar menjadi
+                    lebih baik buat kamu.”
+                </div>
+
+                <img
+                    class="mini-couple"
+                    src="boneka-sayang.png"
+                    alt="Dua boneka">
+
+                <p>
+                    Aku nggak mau mencari alasan.
+                    Aku cuma benar-benar nggak mau
+                    kehilangan kamu. ❤️
+                </p>
+
+                <button
+                    class="main-button"
+                    onclick="kePertanyaan()">
+                    🥺 Lanjut
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERTANYAAN -->
+        <section
+            id="pertanyaan"
+            class="section hidden">
+
+            <div class="card question-card">
+
+                <div class="icon">
+                    🥺
+                </div>
+
+                <h2>
+                    Jadi...
+                </h2>
+
+                <p class="question">
+                    Kamu masih marah sama aku,
+                    Sayang?
+                </p>
+
+                <p class="hint">
+                    Pilih salah satu ya ❤️
+                </p>
+
+                <div class="buttons">
+
+                    <button
+                        id="maafinBtn"
+                        class="yes-button"
+                        onclick="maafinAku()">
+                        ❤️ Aku Maafin Kamu
+                    </button>
+
+                    <button
+                        id="belumBtn"
+                        class="no-button"
+                        onclick="belumMau()">
+                        😤 Belum Mau
+                    </button>
+
+                </div>
+
+                <div id="hasil"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEJUTAN -->
+        <section
+            id="kejutan"
+            class="section hidden">
+
+            <div class="card surprise">
+
+                <div class="big-heart">
+                    💖
+                </div>
+
+                <h2>
+                    Yeayyy! 🥹
+                </h2>
+
+                <h3>
+                    Sayang sudah maafin aku ❤️
+                </h3>
+
+                <img
+                    class="mini-couple"
+                    src="boneka-sayang.png"
+                    alt="Boneka kembar">
+
+                <p>
+                    Makasih banyak ya, Sayang.
+                </p>
+
+                <p>
+                    Aku mungkin masih banyak kurangnya,
+                    tapi aku akan terus berusaha menjadi
+                    lebih baik buat kamu.
+                </p>
+
+                <div class="love-message">
+                    Aku sayang kamu, Sayang ❤️
+                </div>
+
+                <button
+                    class="dark-button"
+                    onclick="pesanTerakhir()">
+                    💌 Satu Pesan Lagi
+                </button>
+
+                <div id="pesanTerakhir"></div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            Dibuat dengan ❤️ khusus untuk Sayang.
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

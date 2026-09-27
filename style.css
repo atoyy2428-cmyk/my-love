@@ -1,0 +1,723 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #5a3045;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffd6e8,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #ffc5dc,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff1f7,
+            #ffe0eb
+        );
+}
+
+
+/* =========================
+   HATI BERGERAK
+========================= */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.hearts span {
+    position: absolute;
+
+    bottom: -60px;
+
+    font-size: 25px;
+
+    opacity: 0.45;
+
+    animation: naik 10s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 18%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 32%;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(4) {
+    left: 47%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 62%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(6) {
+    left: 76%;
+    animation-delay: 7s;
+}
+
+.hearts span:nth-child(7) {
+    left: 88%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(8) {
+    left: 95%;
+    animation-delay: 6s;
+}
+
+@keyframes naik {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform:
+            translateY(-115vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding:
+        60px
+        20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    animation: muncul 1s ease;
+}
+
+.label {
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: #c85b87;
+}
+
+h1 {
+    margin-bottom: 15px;
+
+    font-size: 65px;
+
+    color: #d52d6d;
+
+    text-shadow:
+        0 5px 15px
+        rgba(213, 45, 109, 0.15);
+}
+
+.opening {
+    max-width: 600px;
+
+    margin-bottom: 20px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #70455b;
+}
+
+
+/* =========================
+   GAMBAR BONEKA
+========================= */
+
+.couple-image {
+    width: 90%;
+
+    max-width: 620px;
+
+    margin:
+        15px
+        auto
+        20px;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px
+        rgba(160, 65, 105, 0.22);
+
+    animation:
+        mengambang 3s ease-in-out infinite;
+}
+
+.couple-image img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+@keyframes mengambang {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.small-text {
+    margin-bottom: 20px;
+
+    color: #9a6b82;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.main-button {
+    padding:
+        16px
+        32px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ed4c87,
+            #c92163
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px
+        rgba(201, 33, 99, 0.25);
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    transform:
+        translateY(-4px)
+        scale(1.04);
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding:
+        70px
+        20px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    padding:
+        45px
+        35px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.9);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(150, 65, 105, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    animation: muncul 0.8s ease;
+}
+
+.icon {
+    margin-bottom: 15px;
+
+    font-size: 55px;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+
+    font-size: 35px;
+
+    color: #cc2f6c;
+}
+
+.card p {
+    max-width: 650px;
+
+    margin:
+        15px
+        auto;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #674458;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+    margin:
+        30px
+        auto;
+
+    padding:
+        25px;
+
+    max-width: 600px;
+
+    border-left:
+        5px solid
+        #e83e7d;
+
+    border-radius: 15px;
+
+    background: #fff0f6;
+
+    color: #a02e5e;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   MINI BONEKA
+========================= */
+
+.mini-couple {
+    width: 100%;
+
+    max-width: 420px;
+
+    margin:
+        20px
+        auto;
+
+    border-radius: 25px;
+
+    display: block;
+
+    box-shadow:
+        0 15px 35px
+        rgba(150, 65, 105, 0.15);
+}
+
+
+/* =========================
+   PERTANYAAN
+========================= */
+
+.question {
+    font-size: 23px !important;
+
+    font-weight: bold;
+
+    color: #c72f6b !important;
+}
+
+.hint {
+    font-size: 14px !important;
+
+    color: #9b7288 !important;
+}
+
+.buttons {
+    position: relative;
+
+    min-height: 140px;
+
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.buttons button {
+    padding:
+        15px
+        24px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.yes-button {
+    background:
+        linear-gradient(
+            135deg,
+            #ed4b87,
+            #c51f60
+        );
+
+    color: white;
+
+    box-shadow:
+        0 10px 25px
+        rgba(197, 31, 96, 0.25);
+}
+
+.yes-button:hover {
+    transform: scale(1.06);
+}
+
+.no-button {
+    background: #eee8ed;
+
+    color: #76566a;
+}
+
+#hasil {
+    min-height: 35px;
+
+    margin-top: 20px;
+
+    color: #c72f6b;
+
+    font-weight: bold;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   KEJUTAN
+========================= */
+
+.surprise {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #ffe9f2
+        );
+}
+
+.big-heart {
+    margin-bottom: 15px;
+
+    font-size: 85px;
+
+    animation:
+        detak 1.2s infinite;
+}
+
+.surprise h3 {
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+    color: #d52d6d;
+}
+
+.love-message {
+    margin:
+        30px
+        0;
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    color: #d32669;
+}
+
+.dark-button {
+    padding:
+        15px
+        25px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #4d3040;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.dark-button:hover {
+    transform: scale(1.05);
+}
+
+#pesanTerakhir {
+    margin-top: 25px;
+
+    color: #c72f6b;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding:
+        40px
+        20px
+        60px;
+
+    text-align: center;
+
+    color: #9b7288;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes detak {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes muncul {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding:
+            50px
+            15px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .opening {
+        font-size: 17px;
+    }
+
+    .couple-image {
+        width: 100%;
+
+        border-radius: 25px;
+    }
+
+    .card {
+        padding:
+            35px
+            20px;
+    }
+
+    .card h2 {
+        font-size: 29px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        min-height: 190px;
+    }
+
+    .buttons button {
+        width: 85%;
+    }
+
+    .love-message {
+        font-size: 29px;
+    }
+}
